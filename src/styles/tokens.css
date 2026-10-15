@@ -1,0 +1,65 @@
+/* ─────────────────────────────────────────────
+   CHRONOS — Design tokens
+   ───────────────────────────────────────────── */
+:root {
+  /* Palette istituzionale */
+  --obsidian: #090909;
+  --ivory: #f2ede3;
+  --gold: #b69a63;
+  --bronze: #785b3a;
+  --stone: #77746e;
+
+  /* Derivati */
+  --ink: var(--ivory);
+  --ink-soft: #c9c3b7; /* 10.6:1 su obsidian */
+  --ink-mute: #9c978d; /* 6.6:1 su obsidian */
+  --line: rgba(242, 237, 227, 0.14);
+  --line-strong: rgba(242, 237, 227, 0.28);
+  --surface: #121110;
+  --surface-2: #1a1816;
+  --gold-soft: rgba(182, 154, 99, 0.16);
+
+  /* Colori dinamici dell'epoca attiva (aggiornati dalla timeline) */
+  --era-accent: var(--gold);
+  --era-bg: #0d0c0a;
+  --era-surface: #161411;
+  --era-ink: var(--ivory);
+
+  /* Tipografia */
+  --font-display: 'Marcellus', 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --fs-micro: 0.72rem;
+  --fs-small: 0.84rem;
+  --fs-body: 1rem;
+  --fs-lead: clamp(1.15rem, 1.02rem + 0.5vw, 1.45rem);
+  --fs-h3: clamp(1.35rem, 1.15rem + 0.8vw, 1.9rem);
+  --fs-h2: clamp(2.1rem, 1.4rem + 3vw, 4.4rem);
+  --fs-h1: clamp(2.3rem, 0.9rem + 5.6vw, 6.6rem);
+
+  --track-wide: 0.22em;
+  --track-mid: 0.12em;
+
+  /* Spaziature e layout */
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2.5rem);
+  --section-pad: clamp(4.5rem, 3rem + 7vw, 10rem);
+  --maxw: 1360px;
+  --radius: 2px;
+  --header-h: 68px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-mid: 420ms;
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-mid: 0ms;
+  }
+}
